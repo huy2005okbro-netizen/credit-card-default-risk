@@ -1,0 +1,55 @@
+{
+  "selected_model": "balanced_logistic",
+  "features": [
+    "LIMIT_BAL",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_AMT1",
+    "BILL_AMT1"
+  ],
+  "threshold": 0.5,
+  "cost_assumptions": {
+    "false_negative": 5.0,
+    "false_positive": 1.0
+  },
+  "split_sizes": {
+    "train": 18000,
+    "validation": 6000,
+    "test": 6000
+  },
+  "validation_candidates": {
+    "unweighted_logistic": {
+      "threshold": 0.2,
+      "cost": 3869.0,
+      "roc_auc": 0.7174482440210731,
+      "pr_auc": 0.49183859354493176,
+      "recall": 0.7083647324792766,
+      "precision": 0.32707028531663185,
+      "brier_score": 0.1465333909483479
+    },
+    "balanced_logistic": {
+      "threshold": 0.5,
+      "cost": 3784.0,
+      "roc_auc": 0.7177968934721115,
+      "pr_auc": 0.4903196376017121,
+      "recall": 0.6480783722682742,
+      "precision": 0.37245560848852316,
+      "brier_score": 0.2069079197044825
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.7010421264326759,
+    "pr_auc": 0.484014797789794,
+    "recall": 0.6269781461944235,
+    "precision": 0.36443276390713975,
+    "brier_score": 0.20958710691599625
+  },
+  "created_at_utc": "2026-10-12T04:48:07.555399+00:00",
+  "python": "3.12.10",
+  "limitations": [
+    "The dataset is observational and cannot establish causal effects.",
+    "Performance may not generalize to other populations, periods, or business processes.",
+    "This model supports voluntary outreach triage only, never credit approval, pricing, penalties, or automated adverse action."
+  ]
+}
